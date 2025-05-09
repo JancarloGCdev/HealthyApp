@@ -2,18 +2,6 @@
 import Section from "@/components/Section";
 import ArticlePreview from "@/components/ArticlePreview";
 import AdPlaceholder from "@/components/Adplaceholder";
-import Head from "next/head";
-
-<Head>
-  <title>Wellness Life – Health & Wellbeing Tips for a Better Life</title>
-  <meta name="description" content="Learn practical wellness, nutrition, and mental health strategies to improve your daily life. Trusted advice and tips from experts." />
-  <meta property="og:title" content="Wellness Life – Health & Wellbeing Tips" />
-  <meta property="og:description" content="Practical advice on health, nutrition, mental wellbeing, and daily habits. Empower your lifestyle today." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com/" />
-  <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-</Head>
 
 export default function HomePage() {
   return (
