@@ -2,11 +2,24 @@
 import Section from "@/components/Section";
 import ArticlePreview from "@/components/ArticlePreview";
 import AdPlaceholder from "@/components/Adplaceholder";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
     <>
-      <main className="container mx-auto p-6">
+    <main className="max-w-6xl mx-auto px-4 py-10">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">Your Path to Wellness Starts Here</h1>
+      </header>
+
+      <div className="relative w-full h-[300px] mb-6 rounded-lg overflow-hidden">
+        <Image
+          src="/images/begin.png"
+          alt="Mature person walking on a peaceful path in a modern fitness center, symbolizing the start of a wellness journey."
+          fill
+          className="object-cover"
+        />
+      </div>
         <Section title="Welcome to Fast Fit Grow">
           <p className="text-lg">
             Discover how to improve your physical and mental wellbeing through curated content, expert tips,
@@ -22,15 +35,15 @@ export default function HomePage() {
               title="10 Benefits of Meditation You Didn't Know"
               excerpt="Meditation improves focus, reduces stress, and can even strengthen your immune system. Discover how a few minutes a day can change your life."
               link="/meditation"
-              imageSrc="/images/meditation.jpg" // Ruta a la imagen
-              imageAlt="Arm Toning"
+              imageSrc="/images/meditation.png" // Ruta a la imagen
+              imageAlt="Individual practicing meditation in a calm, minimalist room with soft lighting, plants, and a peaceful aura."
             />
             <ArticlePreview
               title="Nutrition Tips for a Stronger Immune System"
               excerpt="What you eat directly impacts your immune health. Learn which foods boost your defenses and how to build a resilient body."
               link="/nutrition-advice"
-              imageSrc="/images/meditation.jpg" // Ruta a la imagen
-              imageAlt="Arm Toning"
+              imageSrc="/images/inmune.png" // Ruta a la imagen
+              imageAlt="Person with a strong immune system fighting off a virus, depicted through vibrant energy and protective aura surrounding them."
             />
             <ArticlePreview
             title="5-Minute Morning Stretches to Boost Energy"

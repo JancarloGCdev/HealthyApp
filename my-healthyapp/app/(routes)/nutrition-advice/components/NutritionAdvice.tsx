@@ -1,12 +1,23 @@
 "use client"
+import Image from "next/image";
 import React from "react";
 
 export default function NutritionAdvice() {
   return (
-    <section className="max-w-4xl mx-auto px-4 py-10">
+    <main className="max-w-6xl mx-auto px-4 py-10">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">Nutrition tips for a stronger Immune System</h1>
+        <p className="text-lg text-gray-600">Updated May 2025 • 5 min read</p>
+      </header>
+      <div className="relative w-full h-[300px] mb-6 rounded-lg overflow-hidden">
+        <Image
+          src="/images/inmune.png"
+          alt="Person with a strong immune system fighting off a virus, depicted through vibrant energy and protective aura surrounding them."
+          fill
+          className="object-cover"
+        />
+      </div>
       <article>
-        <h1 className="text-4xl font-bold mb-4 text-center">Nutrition Tips for a Stronger Immune System</h1>
-
         {/* Disclaimer Section */}
         <div className="bg-green-100 p-4 mb-6 rounded-md text-center">
           <p className="text-sm font-semibold text-gray-400">
@@ -100,6 +111,6 @@ export default function NutritionAdvice() {
           Prioritize your health with good nutrition – small changes can lead to big results.
         </p>
       </article>
-    </section>
+    </main>
   );
 }

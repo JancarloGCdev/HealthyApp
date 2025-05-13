@@ -1,10 +1,22 @@
+import Image from "next/image";
 import React from "react";
 
 export default function SleepHabits() {
   return (
-    <section className="max-w-4xl mx-auto px-4 py-10">
+    <main className="max-w-6xl mx-auto px-4 py-10">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">Healthy sleep habits for a better life</h1>
+        <p className="text-lg text-gray-600">Updated May 2025 • 4 min read</p>
+      </header>
+      <div className="relative w-full h-[300px] mb-6 rounded-lg overflow-hidden">
+        <Image
+          src="/images/begin.png"
+          alt="Glass of water with lemon"
+          fill
+          className="object-cover"
+        />
+      </div>
       <article>
-        <h1 className="text-4xl font-bold mb-4 text-center">Healthy Sleep Habits for a Better Life</h1>
         <p className="text-lg mb-6">
           Sleep is a fundamental pillar of health, just like diet and exercise. In this article, we’ll explore practical, science-backed sleep habits to improve your quality of rest, mood, and overall well-being.
         </p>
@@ -85,6 +97,6 @@ export default function SleepHabits() {
           Prioritize your sleep – your body and mind will thank you!
         </p>
       </article>
-    </section>
+    </main>
   );
 }

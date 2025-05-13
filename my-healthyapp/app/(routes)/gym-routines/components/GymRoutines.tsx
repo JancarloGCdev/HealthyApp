@@ -1,10 +1,24 @@
 import Section from "@/components/Section";
 import AdPlaceholder from "@/components/Adplaceholder";
 import ArticlePreview from "@/components/ArticlePreview";
+import Image from "next/image";
 
 export default function GymRoutines() {
   return (
-    <main className="container mx-auto p-6">
+    <main className="max-w-6xl mx-auto px-4 py-10">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">Your ultimate guide to Gym routines by muscle group</h1>
+        <p className="text-lg text-gray-600">Updated May 2025 • 1 min read</p>
+      </header>
+
+      <div className="relative w-full h-[300px] mb-6 rounded-lg overflow-hidden">
+        <Image
+          src="/images/begin.png"
+          alt="Glass of water with lemon"
+          fill
+          className="object-cover"
+        />
+      </div>
       <Section title="Gym Routines Overview">
         <p className="text-lg">
           Achieve your fitness goals with our structured gym routines. Whether you want to build strength, improve endurance,

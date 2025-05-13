@@ -2,19 +2,20 @@ import Image from "next/image";
 
 export default function HydrationTipsPage() {
   return (
-    <article className="max-w-3xl mx-auto px-4 py-12">
+    <main className="max-w-6xl mx-auto px-4 py-10">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Top 7 Hydration Tips for a Healthier Day</h1>
+        <h1 className="text-4xl font-bold mb-4">Top 7 Hydration tips for a healthier day</h1>
         <p className="text-lg text-gray-600">Updated May 2025 • 7 min read</p>
       </header>
 
-      <Image
-        src="/images/hydration.jpg"
-        alt="Glass of water with lemon"
-        width={800}
-        height={400}
-        className="rounded-lg mb-6"
-      />
+      <div className="relative w-full h-[300px] mb-6 rounded-lg overflow-hidden">
+        <Image
+          src="/images/begin.png"
+          alt="Glass of water with lemon"
+          fill
+          className="object-cover"
+        />
+      </div>
 
       <section className="space-y-6 text-lg leading-relaxed text-gray-800">
         <p>
@@ -76,6 +77,6 @@ export default function HydrationTipsPage() {
           Published by Fast Fit Grow. This article is for informational purposes only and not medical advice.
         </footer>
       </section>
-    </article>
+    </main>
   );
 }

@@ -1,14 +1,23 @@
 import AdPlaceholder from "@/components/Adplaceholder";
 import Section from "@/components/Section";
+import Image from "next/image";
 
 export default function FiveMinutesStretch() {
   return (
-    <div className="container mx-auto p-6">
+    <main className="max-w-6xl mx-auto px-4 py-10">
       {/* Título principal del artículo */}
-      <h1 className="text-4xl font-bold mb-6">
-        5-Minute Morning Stretches to Boost Energy
-      </h1>
-
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">5-Minute morning stretches to boost energy</h1>
+        <p className="text-lg text-gray-600">Updated May 2025 • 3 min read</p>
+      </header>
+      <div className="relative w-full h-[300px] mb-6 rounded-lg overflow-hidden">
+        <Image
+          src="/images/begin.png"
+          alt="Glass of water with lemon"
+          fill
+          className="object-cover"
+        />
+      </div>
       <Section title="Why Stretch in the Morning?">
         <p className="text-gray-700 mb-4">
           Waking up can be difficult, especially when your body feels stiff or sluggish. Morning stretching is one of the most effective ways to gently awaken your muscles and stimulate blood flow. Not only does it reduce physical tension, but it also helps clear your mind and prepare you mentally for the day ahead.
@@ -69,6 +78,6 @@ export default function FiveMinutesStretch() {
         </p>
       </Section>
       <AdPlaceholder />
-    </div>
+    </main>
   );
 }
