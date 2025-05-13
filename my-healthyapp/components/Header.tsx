@@ -73,7 +73,17 @@ export default function Header() {
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700"
                     >
                       {item.name}
+                      {item.submenu?.map((sub)=>(
+                        <Link
+                            key={sub.name}
+                            href={sub.href}
+                            className="block px-4 py-2 text-gren-700 hover:bg-blue-100"
+                          >
+                            {sub.name}
+                          </Link>))}
+
                     </Link>
+                    
                   ))}
                 </div>
               </div>
@@ -108,6 +118,15 @@ export default function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
+                    {item.submenu?.map((sub)=>(
+                      <Link
+                          key={sub.name}
+                          href={sub.href}
+                          className="block px-4 py-2 text-gren-700 hover:bg-blue-100"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </Link>))}
                   </Link>
                 ))}
               </div>
