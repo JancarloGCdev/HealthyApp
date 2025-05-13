@@ -10,7 +10,7 @@ const navItems = [
     items: [
       { name: "Home Workouts", href: "/home-workouts" },
       {
-        name: "Gym Routines",
+        name: "Gym Routines ▼",
         href: "/gym-routines",
         submenu: [
           { name: "Upper Body", href: "/gym-routines/upper-body" },
@@ -49,7 +49,8 @@ const navItems = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null)
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,25 +68,31 @@ export default function Header() {
                 </button>
                 <div className="absolute left-0 mt-2 w-56 bg-white border rounded shadow-md opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-150 ease-in-out z-10">
                   {section.items.map((item) => (
-                    <div key={item.name}>
+                    <div
+                      key={item.name}
+                      className="relative"
+                      onMouseEnter={() => setHoveredItem(item.name)}
+                      onMouseLeave={() => setHoveredItem(null)}
+                    >
                       <Link
                         href={item.href}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700"
                       >
                         {item.name}
                       </Link>
-                      {item.submenu && (
-                        <div className="ml-2">
+
+                      {item.submenu && hoveredItem === item.name && (
+                        <>
                           {item.submenu.map((sub) => (
                             <Link
                               key={sub.name}
                               href={sub.href}
-                              className="block px-6 py-1 text-sm text-gray-600 hover:bg-green-100 hover:text-green-700"
+                              className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-100 align-rigth"
                             >
                               {sub.name}
                             </Link>
                           ))}
-                        </div>
+                        </>
                       )}
                     </div>
                   ))}
@@ -118,21 +125,28 @@ export default function Header() {
               <div className="pl-6 pb-2">
                 {section.items.map((item) => (
                   <div key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="block py-1 text-sm text-gray-700 hover:text-green-600"
-                      onClick={() => setMobileMenuOpen(false)}
+                   <button
+                      onClick={() =>
+                        item.submenu
+                          ? setOpenMobileSubmenu(
+                              openMobileSubmenu === item.name ? null : item.name
+                            )
+                          : setMobileMenuOpen(false)
+                      }
+                      className="w-full text-left py-1 text-sm text-gray-700 hover:text-green-600"
                     >
                       {item.name}
-                    </Link>
-                    {item.submenu && (
-                      <div className="ml-4">
+                    </button>
+
+
+                    {item.submenu && openMobileSubmenu === item.name && (
+                      <div className="ml-4 mt-1">
                         {item.submenu.map((sub) => (
                           <Link
                             key={sub.name}
                             href={sub.href}
-                            className="block py-1 text-sm text-gray-600 hover:text-green-600"
                             onClick={() => setMobileMenuOpen(false)}
+                            className="block py-1 text-sm text-gray-600 hover:text-green-600"
                           >
                             {sub.name}
                           </Link>

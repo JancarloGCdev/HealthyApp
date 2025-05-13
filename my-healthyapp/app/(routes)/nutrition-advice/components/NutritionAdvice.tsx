@@ -5,11 +5,11 @@ export default function NutritionAdvice() {
   return (
     <section className="max-w-4xl mx-auto px-4 py-10">
       <article>
-        <h1 className="text-4xl font-bold mb-4 text-center">Nutrition Advice for a Healthier Life</h1>
+        <h1 className="text-4xl font-bold mb-4 text-center">Nutrition Tips for a Stronger Immune System</h1>
 
         {/* Disclaimer Section */}
-        <div className="bg-yellow-200 p-4 mb-6 rounded-md text-center">
-          <p className="text-lg font-semibold">
+        <div className="bg-green-100 p-4 mb-6 rounded-md text-center">
+          <p className="text-sm font-semibold text-gray-400">
             Disclaimer: This article provides general nutrition advice. Always consult a healthcare professional before making significant changes to your diet or lifestyle. The information provided is for informational purposes only.
           </p>
         </div>

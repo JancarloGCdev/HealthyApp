@@ -17,16 +17,29 @@ export default function HomePage() {
         <AdPlaceholder />
 
         <Section title="Featured Articles">
-          <ArticlePreview
-            title="10 Benefits of Meditation You Didn't Know"
-            excerpt="Meditation improves focus, reduces stress, and can even strengthen your immune system. Discover how a few minutes a day can change your life."
-            link="/routes/meditation"
-          />
-          <ArticlePreview
-            title="Nutrition Tips for a Stronger Immune System"
-            excerpt="What you eat directly impacts your immune health. Learn which foods boost your defenses and how to build a resilient body."
-            link="/routes/nutrition"
-          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <ArticlePreview
+              title="10 Benefits of Meditation You Didn't Know"
+              excerpt="Meditation improves focus, reduces stress, and can even strengthen your immune system. Discover how a few minutes a day can change your life."
+              link="/meditation"
+              imageSrc="/images/meditation.jpg" // Ruta a la imagen
+              imageAlt="Arm Toning"
+            />
+            <ArticlePreview
+              title="Nutrition Tips for a Stronger Immune System"
+              excerpt="What you eat directly impacts your immune health. Learn which foods boost your defenses and how to build a resilient body."
+              link="/nutrition-advice"
+              imageSrc="/images/meditation.jpg" // Ruta a la imagen
+              imageAlt="Arm Toning"
+            />
+            <ArticlePreview
+            title="5-Minute Morning Stretches to Boost Energy"
+            excerpt="Start your day with simple stretches that awaken your body and reduce stiffness."
+            link="/morning-stretches"
+            imageSrc="/images/meditation.jpg"
+            imageAlt="Person stretching in the morning"
+            />
+          </div>
         </Section>
 
         <AdPlaceholder />
