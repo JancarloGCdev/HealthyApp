@@ -35,7 +35,7 @@ export default function HomePage() {
             <ArticlePreview
             title="5-Minute Morning Stretches to Boost Energy"
             excerpt="Start your day with simple stretches that awaken your body and reduce stiffness."
-            link="/morning-stretches"
+            link="sleep-habits/five-minutes-stretch"
             imageSrc="/images/meditation.jpg"
             imageAlt="Person stretching in the morning"
             />
