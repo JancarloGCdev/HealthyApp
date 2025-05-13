@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <>
       <main className="container mx-auto p-6">
-        <Section title="Welcome to Wellness Life">
+        <Section title="Welcome to Fast Fit Grow">
           <p className="text-lg">
             Discover how to improve your physical and mental wellbeing through curated content, expert tips,
             and evidence-based strategies. Our mission is to guide you toward a healthier, more balanced lifestyle.

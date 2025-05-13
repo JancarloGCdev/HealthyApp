@@ -9,19 +9,19 @@ export default function Home() {
 }
 
 export const metadata = {
-  title: "Wellness Life, Health & Wellbeing Tips",
+  title: "Fast Fit Grow, Health & Wellbeing Tips",
   description: "Learn practical wellness, nutrition, and mental health strategies to improve your daily life. Trusted advice and tips from experts.",
   openGraph: {
     title: "Wellness Life, Health & Wellbeing Tips",
     description: "Trusted advice on wellness, nutrition, mental health, and fitness.",
     url: "https://yourdomain.com/",
-    siteName: "Wellness Life",
+    siteName: "Fast Fit Grow",
     images: [
       {
         url: "https://yourdomain.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Wellness Life - Healthy Living",
+        alt: "Fast Fit Grow - Healthy Living",
       },
     ],
     locale: "en_US",
@@ -29,7 +29,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wellness Life – Health & Wellbeing Tips",
+    title: "Fast Fit Grow – Health & Wellbeing Tips",
     description: "Daily wellness tips, fitness advice, and more.",
     images: ["https://yourdomain.com/og-image.jpg"],
   },

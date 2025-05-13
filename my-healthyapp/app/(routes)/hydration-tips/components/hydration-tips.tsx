@@ -73,7 +73,7 @@ export default function HydrationTipsPage() {
         </div>
 
         <footer className="mt-12 text-gray-500 text-sm">
-          Published by Wellness Life. This article is for informational purposes only and not medical advice.
+          Published by Fast Fit Grow. This article is for informational purposes only and not medical advice.
         </footer>
       </section>
     </article>
