@@ -6,19 +6,28 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   {
-    label: "Exercises",
-    items: [
-      { name: "Home Workouts", href: "./home-workouts" },
-      { name: "Gym Routines", href: "./gym-routines" },
-      { name: "Stretching & Flexibility", href: "./stretching" },
-    ],
+  label: "Exercises",
+  items: [
+    { name: "Home Workouts", href: "/home-workouts" },
+    {
+      name: "Gym Routines",
+      href: "/gym-routines",
+      submenu: [
+        { name: "Upper Body", href: "/gym-routines/upper-body" },
+        { name: "Lower Body", href: "/gym-routines/lower-body" },
+        { name: "Arms", href: "/gym-routines/arms" },
+      ],
+    },
+    { name: "Stretching & Flexibility", href: "/stretching" },
+  ],
+
   },
   {
     label: "Tips",
     items: [
       { name: "Hydration Tips", href: "./hydration-tips" },
       { name: "Sleep Habits", href: "./sleep-habits" },
-      { name: "Nutrition Advice", href: "./nutrition" },
+      { name: "Nutrition Advice", href: "./nutrition-advice" },
     ],
   },
   {
