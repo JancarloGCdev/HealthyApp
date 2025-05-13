@@ -34,7 +34,7 @@ export default function HomePage() {
             <ArticlePreview
               title="10 Benefits of Meditation You Didn't Know"
               excerpt="Meditation improves focus, reduces stress, and can even strengthen your immune system. Discover how a few minutes a day can change your life."
-              link="/meditation"
+              link="/meditation-benefits"
               imageSrc="/images/meditation.png" // Ruta a la imagen
               imageAlt="Individual practicing meditation in a calm, minimalist room with soft lighting, plants, and a peaceful aura."
             />
