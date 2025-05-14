@@ -32,7 +32,7 @@ const navItems = [
   {
     label: "Benefits",
     items: [
-      { name: "Meditation Benefits", href: "/meditation" },
+      { name: "Meditation Benefits", href: "/meditation-benefits" },
       { name: "Cardio Health", href: "/cardio" },
       { name: "Muscle Recovery", href: "/recovery" },
     ],
@@ -82,17 +82,17 @@ export default function Header() {
                       </Link>
 
                       {item.submenu && hoveredItem === item.name && (
-                        <>
-                          {item.submenu.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              href={sub.href}
-                              className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-100 align-rigth"
-                            >
-                              {sub.name}
-                            </Link>
-                          ))}
-                        </>
+                      <div className="absolute top-full w-56 bg-white border rounded shadow-md z-20">
+                        {item.submenu.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            href={sub.href}
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-100"
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
                       )}
                     </div>
                   ))}
